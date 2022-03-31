@@ -40,10 +40,18 @@ export default function Home() {
     <div>
       <Head>
         <title>Jose Hernandez - Portfolio</title>
+        <meta name="title" content="Jose Hernandez - Portfolio" />
         <meta
           name="description"
           content="Jose Hernandez - Come discover projects, know about the author, take a look at the possibilities."
         />
+        <meta name="keywords" content="portfolio, web developer, frontend, websites" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta property="og:title" content="Jose Hernandez - Portfolio" />
+        <meta property="og:url" content="https://www.hernandez-jose.com/" />
+        <meta property="og:image" content="/site-preview.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav showSidebar={showSidebar} setShowSidebar={setShowSidebar} currentSection={currentSection} />
