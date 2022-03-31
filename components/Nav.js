@@ -56,7 +56,7 @@ export const Nav = ({ showSidebar, setShowSidebar, currentSection }) => {
         </div>
       </aside>
       <div onClick={() => setShowSidebar(!showSidebar)} className="fixed p-4 z-20 cursor-pointer mix-blend-difference">
-        <Image src={'/NavHamburger.svg'} height={40} width={40} className="text-rose-600 " />
+        <Image src={'/NavHamburger.svg'} height={40} width={40} className="text-rose-600 " alt="" />
       </div>
     </nav>
   );

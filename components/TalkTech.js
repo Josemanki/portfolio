@@ -4,7 +4,7 @@ const TalkTech = () => {
   return (
     <section id="talk-tech" className="bg-custom-teal">
       <div className="h-full py-10 px-6 lg:px-10 2xl:px-40">
-        <h3 className="uppercase text-center text-white text-xl font-black font-poppins">Let's Talk Tech</h3>
+        <h3 className="uppercase text-center text-white text-xl font-black font-poppins">{"Let's Talk Tech"}</h3>
         <div className="my-6">
           <h4 className="uppercase text-white font-black font-poppins text-xl">Frontend:</h4>
           <p className="text-white text-lg mt-2 font-regular">

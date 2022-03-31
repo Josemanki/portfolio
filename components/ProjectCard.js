@@ -3,11 +3,11 @@ import React from 'react';
 const ProjectCard = ({ title, description, github, extended, image, projectUrl }) => {
   return (
     <div className="flex h-full flex-col justify-evenly max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-neutral-800 dark:border-gray-700">
-      <a target="_blank" href={projectUrl ? projectUrl : '#recent-work'}>
-        <img className="rounded-t-lg" src={image} alt="" />
+      <a target="_blank" rel="noreferrer" href={projectUrl ? projectUrl : '#recent-work'}>
+        <img className="rounded-t-lg" src={image} alt={`Screenshot from ${title}`} />
       </a>
       <div className="p-5">
-        <a target="_blank" href={projectUrl}>
+        <a target="_blank" rel="noreferrer" href={projectUrl}>
           <h4 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h4>
         </a>
         <p className="mb-3 font-normal text-gray-700 text-gray-400">{description}</p>
@@ -15,6 +15,7 @@ const ProjectCard = ({ title, description, github, extended, image, projectUrl }
           <a
             href={projectUrl}
             target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-rose-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Visit Site
@@ -34,6 +35,7 @@ const ProjectCard = ({ title, description, github, extended, image, projectUrl }
           <a
             href={github}
             target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-rose-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Github
