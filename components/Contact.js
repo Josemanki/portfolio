@@ -28,6 +28,7 @@ const Contact = () => {
     })
       .then(() => {
         setResult('Great! Your message has been sent!');
+        setFormData({});
       })
       .catch((error) => {
         console.log(error);
