@@ -47,7 +47,7 @@ export default function Home() {
         />
         <meta name="keywords" content="portfolio, web developer, frontend, websites" />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta property="og:title" content="Jose Hernandez - Portfolio" />
         <meta property="og:url" content="https://www.hernandez-jose.com/" />
