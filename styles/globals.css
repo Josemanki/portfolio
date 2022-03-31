@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .decoration-top {
+    @apply after:content-[''] after:w-[250px] after:h-[10px] after:border-t-8 after:border-rose-600 after:absolute after:-top-16 after:-left-10;
+  }
+  .decoration-bottom {
+    @apply before:w-[250px] before:h-[10px] before:border-b-8 before:border-rose-600 before:absolute before:-bottom-16 before:-right-[1.5rem];
+  }
+
+  .decoration-top-alt {
+    @apply after:content-[''] after:w-[250px] after:h-[250px] after:border-t-8 after:border-l-8 after:border-rose-600 after:absolute after:-top-10 after:left-10;
+  }
+
+  .decoration-bottom-alt {
+    @apply before:w-[300px] before:h-[150px] before:border-b-8 before:border-r-8 before:border-rose-600 before:absolute before:bottom-0 before:right-10;
+  }
+}
