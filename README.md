@@ -1,4 +1,4 @@
-# <center>Portfolio Website</center> <center>[hernandez-jose.com](https://www.hernandez-jose.com/)</center>
+<h1 align="center">Portfolio Website <br /> <a href="https://www.hernandez-jose.com/">hernandez-jose.com</a></h1>
 
 ![Portfolio Picture](https://i.imgur.com/4Qi2hpa.png)
 
