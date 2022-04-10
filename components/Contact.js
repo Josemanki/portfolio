@@ -7,7 +7,9 @@ const Contact = () => {
 
   const encode = (data) => {
     return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
       .join('&');
   };
 
@@ -28,7 +30,7 @@ const Contact = () => {
     })
       .then(() => {
         setResult('Great! Your message has been sent!');
-        setFormData({});
+        setFormData({ message: '', email: '', name: '' });
       })
       .catch((error) => {
         console.log(error);
@@ -39,7 +41,7 @@ const Contact = () => {
   const { name, email, message } = formData;
 
   return (
-    <section id="contact" className="section-home bg-neutral-200 min-h-screen">
+    <section id="contact" className="section-home bg-neutral-200">
       <div className="px-6 h-full flex flex-col items-center justify-around">
         <div className="py-12">
           <h2 className="text-regular-800 font-semibold font-poppins text-5xl text-center">
@@ -58,11 +60,27 @@ const Contact = () => {
           <label htmlFor="name" className="uppercase font-poppins">
             Name <span className="text-rose-600 font-black">*</span>
           </label>
-          <input type="text" id="name" name="name" value={name} onChange={handleChange} className="p-2" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            className="p-2"
+            required
+          />
           <label htmlFor="email" className="uppercase font-poppins mt-8">
             Email <span className="text-rose-600 font-black">*</span>
           </label>
-          <input type="email" id="email" name="email" value={email} onChange={handleChange} className="p-2" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            className="p-2"
+            required
+          />
           <label htmlFor="message" className="uppercase font-poppins mt-8">
             Message <span className="text-rose-600 font-black">*</span>
           </label>
@@ -76,7 +94,10 @@ const Contact = () => {
             rows={5}
             required
           />
-          <button type="submit" className="bg-custom-teal text-white font-poppins uppercase rounded p-2 mt-2">
+          <button
+            type="submit"
+            className="bg-custom-teal text-white font-poppins uppercase rounded p-2 mt-2"
+          >
             Send message
           </button>
         </form>

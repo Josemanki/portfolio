@@ -18,3 +18,7 @@
     @apply before:w-[300px] before:h-[150px] before:border-b-8 before:border-r-8 before:border-rose-600 before:absolute before:bottom-0 before:right-10;
   }
 }
+
+*, html {
+  box-sizing: border-box;
+}
