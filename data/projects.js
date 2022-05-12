@@ -7,7 +7,7 @@ const projects = [
     extended:
       "Fully-featured Ecommerce website made with NextJS, Typescript and TailwindCSS, leveraging NextJS's API routes and MongoDB for the backend, as well as Stripe payments.",
     image: '/urbanfashion.png',
-    projectUrl: 'urbanfashion.vercel.app',
+    projectUrl: 'https://urbanfashion.vercel.app/',
   },
   {
     title: 'Portfolio Website',
@@ -23,9 +23,18 @@ const projects = [
     description:
       'Small craft list (shopping list) generator for Dofus items. Made with React using Hooks and an external API.',
     github: 'https://github.com/Josemanki/craftlist-dev',
-    extended: 'This is an extended description',
+    extended:
+      'Small craft list (shopping list) generator for Dofus items. Made with React using Hooks and an external API.',
     image: '/craftlist.png',
     projectUrl: 'https://dofuscraftlist-dev.netlify.com',
+  },
+  {
+    title: 'Office Petition',
+    description: 'Petition project made with handlebars, Javascript and with an Express & PostgreSQL backend.',
+    github: 'https://github.com/Josemanki/office-petition',
+    extended: 'Petition project made with handlebars, Javascript and with an Express & PostgreSQL backend.',
+    image: '/petition.png',
+    projectUrl: 'https://office-petition.herokuapp.com/',
   },
   {
     title: 'AlmanaxApp',
@@ -54,7 +63,7 @@ const projects = [
     extended:
       'The app uses Firebase authentication in order to assign an account to a certain email, which automatically logs in and can add expenses straight away. The whole expense tracking is built over a realtime database powered by Firebase too.',
     image: '/expensify.jpg',
-    projectUrl: 'https://expensify-side.netlify.app/dashboard',
+    projectUrl: 'https://expensify-side.netlify.app',
   },
   {
     title: 'Social Media Dashboard',
