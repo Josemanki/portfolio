@@ -1,8 +1,17 @@
 const projects = [
   {
-    title: 'Portfolio Website',
+    title: 'Urban Fashion',
     description:
-      'This exact portfolio website! Made using NextJS and TailwindCSS.',
+      "Fully-featured Ecommerce website made with NextJS, Typescript and TailwindCSS, leveraging NextJS's API routes and MongoDB for the backend, as well as Stripe payments.",
+    github: 'https://github.com/Josemanki/urbanfashion',
+    extended:
+      "Fully-featured Ecommerce website made with NextJS, Typescript and TailwindCSS, leveraging NextJS's API routes and MongoDB for the backend, as well as Stripe payments.",
+    image: '/urbanfashion.png',
+    projectUrl: 'urbanfashion.vercel.app',
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'This exact portfolio website! Made using NextJS and TailwindCSS.',
     github: 'https://github.com/Josemanki/portfolio',
     extended:
       'This exact portfolio website! Made using NextJS and TailwindCSS. Design work was in order. Future additions to come.',
@@ -40,8 +49,7 @@ const projects = [
   },
   {
     title: 'Expense Tracker',
-    description:
-      'Expense tracker made with React, Redux and Firebase. Tested using Jest and Enzyme.',
+    description: 'Expense tracker made with React, Redux and Firebase. Tested using Jest and Enzyme.',
     github: 'https://github.com/Josemanki/expensify',
     extended:
       'The app uses Firebase authentication in order to assign an account to a certain email, which automatically logs in and can add expenses straight away. The whole expense tracking is built over a realtime database powered by Firebase too.',
@@ -50,8 +58,7 @@ const projects = [
   },
   {
     title: 'Social Media Dashboard',
-    description:
-      'Small HTML/CSS/JS social media dashboard, presentational only. Features Dark Mode.',
+    description: 'Small HTML/CSS/JS social media dashboard, presentational only. Features Dark Mode.',
     github: 'https://github.com/Josemanki/socialmedia-dashboard',
     extended:
       'Small HTML/CSS/JS social media dashboard, presentational only, not connected to any backend or API yet. Features Dark Mode.',
