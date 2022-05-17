@@ -11,7 +11,8 @@ const projects = [
   },
   {
     title: 'Portfolio Website',
-    description: 'This exact portfolio website! Made using NextJS and TailwindCSS.',
+    description:
+      'This exact portfolio website! Made using NextJS and TailwindCSS.',
     github: 'https://github.com/Josemanki/portfolio',
     extended:
       'This exact portfolio website! Made using NextJS and TailwindCSS. Design work was in order. Future additions to come.',
@@ -30,9 +31,11 @@ const projects = [
   },
   {
     title: 'Office Petition',
-    description: 'Petition project made with handlebars, Javascript and with an Express & PostgreSQL backend.',
+    description:
+      'Petition project made with handlebars, Javascript and with an Express & PostgreSQL backend.',
     github: 'https://github.com/Josemanki/office-petition',
-    extended: 'Petition project made with handlebars, Javascript and with an Express & PostgreSQL backend.',
+    extended:
+      'Petition project made with handlebars, Javascript and with an Express & PostgreSQL backend.',
     image: '/petition.png',
     projectUrl: 'https://office-petition.herokuapp.com/',
   },
@@ -58,21 +61,13 @@ const projects = [
   },
   {
     title: 'Expense Tracker',
-    description: 'Expense tracker made with React, Redux and Firebase. Tested using Jest and Enzyme.',
+    description:
+      'Expense tracker made with React, Redux and Firebase. Tested using Jest and Enzyme.',
     github: 'https://github.com/Josemanki/expensify',
     extended:
       'The app uses Firebase authentication in order to assign an account to a certain email, which automatically logs in and can add expenses straight away. The whole expense tracking is built over a realtime database powered by Firebase too.',
     image: '/expensify.jpg',
     projectUrl: 'https://expensify-side.netlify.app',
-  },
-  {
-    title: 'Social Media Dashboard',
-    description: 'Small HTML/CSS/JS social media dashboard, presentational only. Features Dark Mode.',
-    github: 'https://github.com/Josemanki/socialmedia-dashboard',
-    extended:
-      'Small HTML/CSS/JS social media dashboard, presentational only, not connected to any backend or API yet. Features Dark Mode.',
-    image: '/socialmedia.png',
-    projectUrl: 'https://josemanki.github.io/socialmedia-dashboard/',
   },
   {
     title: 'Should I Upgrade?',
