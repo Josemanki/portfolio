@@ -1,5 +1,12 @@
 import React from 'react';
+import Vivus from 'vivus';
 import Image from 'next/image';
+
+let animatedLogo;
+
+if (typeof window !== 'undefined') {
+  animatedLogo = new Vivus('logo', { duration: 150, file: '/logo.svg' });
+}
 
 const Hero = () => {
   return (
@@ -8,9 +15,7 @@ const Hero = () => {
       className="section-home min-h-screen bg-radial-home flex justify-center align-center flex-col p-4 pt-0"
     >
       <div className="flex items-center justify-center flex-col">
-        <div className="w-64 h-64 sm:w-80 sm:h-80">
-          <Image src={'/logo.svg'} width="100%" height="100%" layout="responsive" alt="Logo" />
-        </div>
+        <div id="logo" className="w-64 h-64 sm:w-80 sm:h-80"></div>
         <h1 className="text-5xl text-white font-red-hat text-center sm:text-7xl">Jose Hernández</h1>
         <h2 className="text-2xl text-white font-light text-center sm:text-4xl">Fullstack Web Developer</h2>
       </div>
