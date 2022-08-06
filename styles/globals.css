@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply text-white;
+  } 
+}
+
 @layer components {
   .decoration-top {
     @apply after:content-[''] after:w-[250px] after:h-[10px] after:border-t-8 after:border-rose-600 after:absolute after:-top-16 after:-left-10;
