@@ -111,9 +111,9 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
+      <AboutMe />
       <MessageSection />
       <RecentWork />
-      <AboutMe />
       <TalkTech />
       <Contact />
       <Footer />

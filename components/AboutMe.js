@@ -5,40 +5,48 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="section-home min-h-screen bg-neutral-800 text-white lg:h-screen"
+      className="section-home p-6 pb-12"
     >
-      <div className="py-12 px-6 h-full flex flex-col items-center justify-around">
-        <h2 className="text-white font-semibold font-poppins text-5xl text-center ">
-          About Me<span className="text-rose-600 font-black">.</span>
+      <div className="mb-12">
+        <h2 className="font-poppins text-4xl font-semibold text-center">
+          About Me
         </h2>
-        <div className="md:flex md:items-center md:gap-10 lg:gap-20 lg:px-10 2xl:px-32 xl:gap-40 xl:text-xl">
-          <Headshot />
-          <div className="my-12 text-justify xl:pr-20">
-            <p className="mt-6">
-              Hey there! - My name is Jose and I am a Fullstack Web Developer
-              recently graduated from SPICED Academy, originally from Venezuela
-              and based in Berlin.
-            </p>
-            <p className="mt-6">
-              Coding has, ever since I can recall, been something I was eager to
-              follow, so last year I took the first steps in the right direction
-              and started my self-directed studies on the matter, specializing
-              mostly in Frontend Development.
-            </p>
-            <p className="mt-6">
-              Flash forward, I decided taking it a step further and joining
-              SPICED. During my time there I learned even more technologies and
-              polished my existing ones, and found myself in love with the idea
-              of being a Fullstack developer.
-            </p>
-            <p className="mt-6">
-              At this point, I am a competent Fullstack Web Developer with
-              excellent communication skills and an avid problem solver due to
-              my previous work experience.
-            </p>
-          </div>
+        <p className="text-center  font-light">
+          May I interest you in some
+          personal information?
+        </p>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-64 h-64 bg-white rounded-full mb-12"></div>
+        <div>
+          <p>
+            I am a Full Stack developer
+            eager to find new challenges
+            that will allow me to
+            develop my skills further.
+            As a naturally curious
+            person, I am always on the
+            lookout for new technologies
+            and techniques.
+          </p>
+          <br />
+          <p>
+            Born and raised in
+            Venezuela, but currently
+            living in Berlin, where I
+            got the chance to
+            participate in SPICED
+            Academy's Web Development
+            Bootcamp, graduating as a
+            fully capable developer.
+          </p>
         </div>
-        <div className="lg:h-[100px]"></div>
+        <a
+          className="block self-start rounded-lg text-center bg-blue-500 px-6 py-3 mt-7"
+          href="#about"
+        >
+          Download my CV
+        </a>
       </div>
     </section>
   );
