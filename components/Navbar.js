@@ -7,9 +7,7 @@ const Navbar = () => {
         <div>
           <h1 className="text-white text-4xl font-semibold font-poppins">
             JH
-            <span className="text-blue-500">
-              .
-            </span>
+            <span className="text-blue-500">.</span>
           </h1>
         </div>
         <ul className="flex flex-row space-x-6">

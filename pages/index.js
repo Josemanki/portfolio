@@ -1,25 +1,18 @@
-import {
-  useState,
-  useEffect,
-} from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import AboutMe from '../components/AboutMe';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import MessageSection from '../components/MessageSection';
+import Skills from '../components/Skills';
 import { Nav } from '../components/Nav';
 import RecentWork from '../components/RecentWork';
 import TalkTech from '../components/TalkTech';
 import Navbar from '../components/Navbar';
 
 export default function Home() {
-  const [showSidebar, setShowSidebar] =
-    useState(false);
-  const [
-    currentSection,
-    setCurrentSection,
-  ] = useState('');
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [currentSection, setCurrentSection] = useState('');
 
   useEffect(() => {
     const options = {
@@ -27,46 +20,28 @@ export default function Home() {
       rootMargin: '0px',
     };
 
-    const observer =
-      new IntersectionObserver(
-        function (entries, observer) {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-              return;
-            }
-            setCurrentSection(
-              entry.target.id
-            );
-          });
-        },
-        options
-      );
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        setCurrentSection(entry.target.id);
+      });
+    }, options);
 
-    const sections =
-      document.querySelectorAll(
-        '.section-home'
-      );
-    sections.forEach((x) =>
-      observer.observe(x)
-    );
+    const sections = document.querySelectorAll('.section-home');
+    sections.forEach((x) => observer.observe(x));
 
     return () => {
-      sections.forEach((x) =>
-        observer.unobserve(x)
-      );
+      sections.forEach((x) => observer.unobserve(x));
     };
   }, []);
 
   return (
     <div className="bg-custom-navy">
       <Head>
-        <title>
-          Jose Hernandez - Portfolio
-        </title>
-        <meta
-          name="title"
-          content="Jose Hernandez - Portfolio"
-        />
+        <title>Jose Hernandez - Portfolio</title>
+        <meta name="title" content="Jose Hernandez - Portfolio" />
         <meta
           name="description"
           content="Jose Hernandez - Come discover projects, know about the author, take a look at the possibilities."
@@ -75,34 +50,13 @@ export default function Home() {
           name="keywords"
           content="portfolio, web developer, frontend, websites"
         />
-        <meta
-          name="robots"
-          content="index, follow"
-        />
-        <meta
-          httpEquiv="Content-Type"
-          content="text/html; charset=utf-8"
-        />
-        <meta
-          name="language"
-          content="English"
-        />
-        <meta
-          property="og:title"
-          content="Jose Hernandez - Portfolio"
-        />
-        <meta
-          property="og:url"
-          content="https://www.hernandez-jose.com/"
-        />
-        <meta
-          property="og:image"
-          content="/site-preview.png"
-        />
-        <link
-          rel="icon"
-          href="/favicon.ico"
-        />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta property="og:title" content="Jose Hernandez - Portfolio" />
+        <meta property="og:url" content="https://www.hernandez-jose.com/" />
+        <meta property="og:image" content="/site-preview.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav
         showSidebar={showSidebar}
@@ -112,7 +66,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <AboutMe />
-      <MessageSection />
+      <Skills />
       <RecentWork />
       <TalkTech />
       <Contact />

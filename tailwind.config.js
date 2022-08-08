@@ -10,21 +10,16 @@ module.exports = {
       colors: {
         'custom-teal': '#28AFB0',
         'custom-navy': '#041C32',
+        'custom-blue': '#2FA4FF',
       },
       fontFamily: {
-        sans: [
-          'Barlow',
-          ...defaultTheme.fontFamily
-            .sans,
-        ],
+        sans: ['Barlow', ...defaultTheme.fontFamily.sans],
       },
       gridTemplateColumns: {
-        'about-grid':
-          'min-content auto',
+        'about-grid': 'min-content auto',
       },
       gridTemplateRows: {
-        'about-grid':
-          'min-content auto',
+        'about-grid': 'min-content auto',
       },
       backgroundImage: {
         'radial-home':
@@ -35,14 +30,8 @@ module.exports = {
       center: true,
     },
     fontFamily: {
-      'red-hat': [
-        'Red Hat Display',
-        'ui-sans-serif',
-      ],
-      poppins: [
-        'Poppins',
-        'ui-sans-serif',
-      ],
+      'red-hat': ['Red Hat Display', 'ui-sans-serif'],
+      poppins: ['Poppins', 'ui-sans-serif'],
     },
   },
   plugins: [],

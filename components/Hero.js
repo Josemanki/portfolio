@@ -11,20 +11,12 @@ const Hero = () => {
       </div>
       <div>
         <h1 className="font-poppins font-semibold text-3xl">
-          <span className="text-blue-500">
-            Hey there,
-          </span>{' '}
-          I'm Jose
+          <span className="text-blue-500">Hey there,</span> I'm Jose
         </h1>
-        <h2 className="mt-2 text-xl font-bold">
-          Full Stack Developer
-        </h2>
+        <h2 className="mt-2 text-xl font-bold">Full Stack Developer</h2>
         <p className="text-md mt-2">
-          Fully committed with bringing
-          maximum quality to awesome
-          products. I enjoy making
-          beautiful, responsive web
-          experiences.
+          Fully committed with bringing maximum quality to awesome products. I
+          enjoy making beautiful, responsive web experiences.
         </p>
         <a
           className="block rounded-lg text-center w-40 bg-blue-500 px-6 py-3 mt-4"
