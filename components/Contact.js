@@ -41,7 +41,7 @@ const Contact = () => {
   const { name, email, message } = formData;
 
   return (
-    <section id="contact" className="section-home bg-neutral-200">
+    <section id="contact" className="section-home">
       <div className="px-6 h-full flex flex-col items-center justify-around">
         <div className="py-12">
           <h2 className="text-regular-800 font-semibold font-poppins text-5xl text-center">

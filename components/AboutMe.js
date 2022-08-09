@@ -1,5 +1,6 @@
 import React from 'react';
-import Headshot from './Headshot';
+import LinkButton from './LinkButton';
+import { AiOutlineFilePdf } from 'react-icons/ai';
 
 const AboutMe = () => {
   return (
@@ -28,12 +29,12 @@ const AboutMe = () => {
             Bootcamp, graduating as a fully capable developer.
           </p>
         </div>
-        <a
-          className="block self-start rounded-lg text-center bg-blue-500 px-6 py-3 mt-7"
-          href="#about"
-        >
-          Download my CV
-        </a>
+        <LinkButton
+          title={'Download my CV'}
+          icon={AiOutlineFilePdf}
+          link={'#'}
+          classes={'self-start mt-3'}
+        />
       </div>
     </section>
   );

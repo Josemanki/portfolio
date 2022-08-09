@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'custom-teal': '#28AFB0',
         'custom-navy': '#041C32',
+        'custom-navy-light': '#062847',
         'custom-blue': '#2FA4FF',
       },
       fontFamily: {

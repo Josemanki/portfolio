@@ -1,4 +1,6 @@
 import React from 'react';
+import LinkButton from './LinkButton';
+import { MdWork } from 'react-icons/md';
 
 const Hero = () => {
   return (
@@ -18,12 +20,12 @@ const Hero = () => {
           Fully committed with bringing maximum quality to awesome products. I
           enjoy making beautiful, responsive web experiences.
         </p>
-        <a
-          className="block rounded-lg text-center w-40 bg-blue-500 px-6 py-3 mt-4"
-          href="#about"
-        >
-          More About Me
-        </a>
+        <LinkButton
+          icon={MdWork}
+          link={'#projects'}
+          title={'Check my Work'}
+          classes={'mt-3'}
+        />
       </div>
     </section>
   );

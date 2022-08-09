@@ -6,9 +6,10 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Skills from '../components/Skills';
 import { Nav } from '../components/Nav';
-import RecentWork from '../components/RecentWork';
+import Projects from '../components/Projects';
 import TalkTech from '../components/TalkTech';
 import Navbar from '../components/Navbar';
+import Summary from '../components/Summary';
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -67,8 +68,8 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Skills />
-      <RecentWork />
-      <TalkTech />
+      <Summary />
+      <Projects />
       <Contact />
       <Footer />
     </div>
