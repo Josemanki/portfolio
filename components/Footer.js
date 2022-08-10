@@ -1,29 +1,51 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { MdOutlineMail } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <footer id="footer">
-      <div className="px-2 mb-4 flex flex-col items-center text-center uppercase font-poppins text-sm font-semibold text-neutral-400 gap-2 lg:flex-row lg:justify-center">
-        <div className="w-36 h-36 mx-32">
-          <Image src={'/logo-footer.svg'} width="100%" height="100%" layout="responsive" alt="" />
+    <footer id="footer" className="p-6 bg-custom-navy-light">
+      <div>
+        <h3 className="uppercase font-poppins text-xl font-medium">
+          Jose <span className="text-custom-blue">Hernandez</span>
+        </h3>
+        <p className="font-light text-lg">Full Stack Developer</p>
+        <div className="flex space-x-12 mt-2">
+          <a href="#">
+            <SiGithub className={'icon-lg'} />
+          </a>
+          <a href="#">
+            <SiLinkedin className={'icon-lg'} />
+          </a>
+          <a href="#">
+            <MdOutlineMail className={'icon-xl'} />
+          </a>
         </div>
-        <div className="flex flex-col gap-2 lg:flex-row lg:order-first">
-          <Link href="#">
-            <a>Home</a>
-          </Link>
-          <Link href="#recent-work">
-            <a>Recent Work</a>
-          </Link>
-        </div>
-        <div className="flex flex-col gap-2 lg:flex-row">
-          <Link href="#about-me">
-            <a>About</a>
-          </Link>
-          <Link href="#contact">
-            <a>Contact</a>
-          </Link>
+
+        <div className="mt-4">
+          <h3 className="text-lg">Navigation</h3>
+          <ul className="mt-2 flex flex-col gap-y-4">
+            <li>
+              <a className="font-light hover:text-rose-500" href="#">
+                About
+              </a>
+            </li>
+            <li>
+              <a className="font-light hover:text-rose-500" href="#">
+                Skills
+              </a>
+            </li>
+            <li>
+              <a className="font-light hover:text-rose-500" href="#">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a className="font-light hover:text-rose-500" href="#">
+                Resume
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

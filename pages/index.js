@@ -7,7 +7,6 @@ import Hero from '../components/Hero';
 import Skills from '../components/Skills';
 import { Nav } from '../components/Nav';
 import Projects from '../components/Projects';
-import TalkTech from '../components/TalkTech';
 import Navbar from '../components/Navbar';
 import Summary from '../components/Summary';
 

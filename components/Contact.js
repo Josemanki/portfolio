@@ -1,5 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import SectionTitle from './SectionTitle';
+import {
+  HiOutlineMail,
+  HiOutlineLocationMarker,
+  HiOutlinePaperAirplane,
+} from 'react-icons/hi';
 
 const Contact = () => {
   const [result, setResult] = useState('');
@@ -43,11 +49,32 @@ const Contact = () => {
   return (
     <section id="contact" className="section-home">
       <div className="px-6 h-full flex flex-col items-center justify-around">
-        <div className="py-12">
-          <h2 className="text-regular-800 font-semibold font-poppins text-5xl text-center">
-            Contact Me<span className="text-rose-600 font-black">.</span>
-          </h2>
+        <SectionTitle
+          title="Contact"
+          subtitle="Drop me a line and let's talk!"
+        />
+
+        <div className="self-start">
+          <div>
+            <div className="flex items-center space-x-4">
+              <HiOutlineMail className="icon-lg" />
+              <div>
+                <h3 className="text-lg font-medium">Email address</h3>
+                <span className="font-light">hello@hernandez-jose.com</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center space-x-4">
+              <HiOutlineLocationMarker className="icon-lg" />
+              <div>
+                <h3 className="text-lg font-medium">Location</h3>
+                <span className="font-light">Berlin, Germany</span>
+              </div>
+            </div>
+          </div>
         </div>
+
         <form
           name="contact-form"
           method="POST"
@@ -57,8 +84,8 @@ const Contact = () => {
         >
           <input type="hidden" name="form-name" value="contact-form" />
           {result && <span className="text-xl text-center mb-6">{result}</span>}
-          <label htmlFor="name" className="uppercase font-poppins">
-            Name <span className="text-rose-600 font-black">*</span>
+          <label htmlFor="name" className="font-poppins">
+            Name <span className="text-rose-600">*</span>
           </label>
           <input
             type="text"
@@ -66,11 +93,11 @@ const Contact = () => {
             name="name"
             value={name}
             onChange={handleChange}
-            className="p-2"
+            className="contact-input"
             required
           />
-          <label htmlFor="email" className="uppercase font-poppins mt-8">
-            Email <span className="text-rose-600 font-black">*</span>
+          <label htmlFor="email" className="font-poppins mt-8">
+            Email address <span className="text-rose-600">*</span>
           </label>
           <input
             type="email"
@@ -78,28 +105,38 @@ const Contact = () => {
             name="email"
             value={email}
             onChange={handleChange}
-            className="p-2"
+            className="contact-input"
             required
           />
-          <label htmlFor="message" className="uppercase font-poppins mt-8">
-            Message <span className="text-rose-600 font-black">*</span>
+          <label htmlFor="message" className="font-poppins mt-8">
+            Message <span className="text-rose-600">*</span>
           </label>
           <textarea
             type="text"
             id="message"
             name="message"
-            className="p-2"
+            className="contact-input"
             value={message}
             onChange={handleChange}
             rows={5}
             required
           />
-          <button
-            type="submit"
-            className="bg-custom-teal text-white font-poppins uppercase rounded p-2 mt-2"
-          >
-            Send message
-          </button>
+          <div>
+            <button
+              type="submit"
+              className="bg-custom-blue flex items-center justify-start font-poppins rounded-lg py-3 px-4 mt-6 hover:bg-rose-500"
+            >
+              Send message
+              <HiOutlinePaperAirplane
+                style={{
+                  height: '20',
+                  width: '20',
+                  transform: 'rotate(90deg)',
+                  marginLeft: '.75rem',
+                }}
+              />
+            </button>
+          </div>
         </form>
         <div className="h-[100px]"></div>
       </div>

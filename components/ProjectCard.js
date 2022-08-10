@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, github, image, projectUrl }) => {
           <p className="mb-3 mt-4 font-normal">{description}</p>
         </div>
       </div>
-      <div className="flex flex-wrap justify-around mb-4">
+      <div className="flex flex-wrap justify-around">
         <LinkButton
           title={'Live Demo'}
           icon={AiOutlineArrowRight}

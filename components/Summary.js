@@ -1,17 +1,12 @@
 import React from 'react';
 import { BiCode } from 'react-icons/bi';
 import { FaDatabase } from 'react-icons/fa';
+import SectionTitle from './SectionTitle';
 
 const Summary = () => {
   return (
     <section className="p-6 pb-12">
-      <div className="mb-12">
-        <h2 className="font-poppins text-4xl font-semibold text-center">
-          What I do
-        </h2>
-        <p className="text-center font-light">Let's get you a summary!</p>
-      </div>
-
+      <SectionTitle title="What I do" subtitle="Let's get you a summary!" />
       <div className="bg-custom-navy-light p-6 flex flex-col mb-6 shadow-lg">
         <div className="flex items-center space-x-2 mb-4">
           <BiCode style={{ height: '40', width: '40', color: '#2FA4FF' }} />

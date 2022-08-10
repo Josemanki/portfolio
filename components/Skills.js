@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionTitle from './SectionTitle';
 import SkillBadge from './SkillBadge';
 
 const Skills = () => {
@@ -18,12 +19,7 @@ const Skills = () => {
   ];
   return (
     <section className="p-6 pb-12" id="skills">
-      <div className="mb-12">
-        <h2 className="font-poppins text-4xl font-semibold text-center">
-          Skills
-        </h2>
-        <p className="text-center font-light">Stuff I have used before!</p>
-      </div>
+      <SectionTitle title="Skills" subtitle="Stuff I have used before!" />
       <div className="flex flex-wrap">
         {testBadges.map((badge) => (
           <SkillBadge {...badge} />
