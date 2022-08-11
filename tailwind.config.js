@@ -29,6 +29,10 @@ module.exports = {
     },
     container: {
       center: true,
+      screens: {
+        sm: '768px',
+        md: '1024px',
+      },
     },
     fontFamily: {
       'red-hat': ['Red Hat Display', 'ui-sans-serif'],

@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav className="hidden w-screen h-16 fixed z-50 bg-custom-navy shadow-md sm:block">
-      <div className="h-full container flex justify-between items-center">
+      <div className="px-6 h-full container flex justify-between items-center">
         <div>
           <h1 className="text-white text-4xl font-semibold font-poppins">
             JH

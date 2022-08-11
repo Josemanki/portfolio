@@ -47,98 +47,100 @@ const Contact = () => {
   const { name, email, message } = formData;
 
   return (
-    <section id="contact" className="section-home">
+    <section id="contact" className="section-home container mb-12">
       <div className="px-6 h-full flex flex-col items-center justify-around">
         <SectionTitle
           title="Contact"
           subtitle="Drop me a line and let's talk!"
         />
+        <div className="sm:flex w-full sm:mt-8">
+          <div className="self-start sm:self-auto flex-1">
+            <div>
+              <div className="flex items-center space-x-4">
+                <HiOutlineMail className="icon-lg" />
+                <div>
+                  <h3 className="text-lg font-medium">Email address</h3>
+                  <span className="font-light">hello@hernandez-jose.com</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center space-x-4">
+                <HiOutlineLocationMarker className="icon-lg" />
+                <div>
+                  <h3 className="text-lg font-medium">Location</h3>
+                  <span className="font-light">Berlin, Germany</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div className="self-start">
-          <div>
-            <div className="flex items-center space-x-4">
-              <HiOutlineMail className="icon-lg" />
-              <div>
-                <h3 className="text-lg font-medium">Email address</h3>
-                <span className="font-light">hello@hernandez-jose.com</span>
-              </div>
+          <form
+            name="contact-form"
+            method="POST"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+            className="flex flex-col mt-8 flex-1 sm:max-w-[700px] sm:mt-0"
+          >
+            <input type="hidden" name="form-name" value="contact-form" />
+            {result && (
+              <span className="text-xl text-center mb-6">{result}</span>
+            )}
+            <label htmlFor="name" className="font-poppins">
+              Name <span className="text-rose-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleChange}
+              className="contact-input"
+              required
+            />
+            <label htmlFor="email" className="font-poppins mt-8">
+              Email address <span className="text-rose-600">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              className="contact-input"
+              required
+            />
+            <label htmlFor="message" className="font-poppins mt-8">
+              Message <span className="text-rose-600">*</span>
+            </label>
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              className="contact-input"
+              value={message}
+              onChange={handleChange}
+              rows={5}
+              required
+            />
+            <div>
+              <button
+                type="submit"
+                className="bg-custom-blue flex items-center justify-start font-poppins rounded-lg py-3 px-4 mt-6 hover:bg-rose-500"
+              >
+                Send message
+                <HiOutlinePaperAirplane
+                  style={{
+                    height: '20',
+                    width: '20',
+                    transform: 'rotate(90deg)',
+                    marginLeft: '.75rem',
+                  }}
+                />
+              </button>
             </div>
-          </div>
-          <div>
-            <div className="flex items-center space-x-4">
-              <HiOutlineLocationMarker className="icon-lg" />
-              <div>
-                <h3 className="text-lg font-medium">Location</h3>
-                <span className="font-light">Berlin, Germany</span>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
-
-        <form
-          name="contact-form"
-          method="POST"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-          className="flex flex-col mt-8 w-full sm:max-w-[700px]"
-        >
-          <input type="hidden" name="form-name" value="contact-form" />
-          {result && <span className="text-xl text-center mb-6">{result}</span>}
-          <label htmlFor="name" className="font-poppins">
-            Name <span className="text-rose-600">*</span>
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={name}
-            onChange={handleChange}
-            className="contact-input"
-            required
-          />
-          <label htmlFor="email" className="font-poppins mt-8">
-            Email address <span className="text-rose-600">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-            className="contact-input"
-            required
-          />
-          <label htmlFor="message" className="font-poppins mt-8">
-            Message <span className="text-rose-600">*</span>
-          </label>
-          <textarea
-            type="text"
-            id="message"
-            name="message"
-            className="contact-input"
-            value={message}
-            onChange={handleChange}
-            rows={5}
-            required
-          />
-          <div>
-            <button
-              type="submit"
-              className="bg-custom-blue flex items-center justify-start font-poppins rounded-lg py-3 px-4 mt-6 hover:bg-rose-500"
-            >
-              Send message
-              <HiOutlinePaperAirplane
-                style={{
-                  height: '20',
-                  width: '20',
-                  transform: 'rotate(90deg)',
-                  marginLeft: '.75rem',
-                }}
-              />
-            </button>
-          </div>
-        </form>
-        <div className="h-[100px]"></div>
       </div>
     </section>
   );
