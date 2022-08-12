@@ -18,7 +18,7 @@ const Skills = () => {
     },
   ];
   return (
-    <section className="p-6 pb-12 container" id="skills">
+    <section className="nav-section p-6 pb-12 container" id="skills">
       <SectionTitle title="Skills" subtitle="Stuff I have used before!" />
       <div className="flex flex-wrap">
         {testBadges.map((badge) => (

@@ -44,8 +44,7 @@ export default {
     {
       name: 'navbar',
       title: 'Navbar links',
-      description:
-        'What options/links should be shown on the Navbar?',
+      description: 'What options/links should be shown on the Navbar?',
       type: 'array',
       of: [
         {
@@ -53,13 +52,18 @@ export default {
           type: 'object',
           fields: [
             {
-              title: 'Section',
+              title: 'Section Name',
               name: 'section',
               type: 'string',
             },
             {
               title: 'URL',
               name: 'url',
+              type: 'string',
+            },
+            {
+              title: 'HTML ID',
+              name: 'sectionId',
               type: 'string',
             },
           ],
@@ -69,8 +73,7 @@ export default {
     {
       name: 'footer',
       title: 'Footer links',
-      description:
-        'What options/links should be shown on the Footer?',
+      description: 'What options/links should be shown on the Footer?',
       type: 'array',
       of: [
         {
@@ -85,6 +88,11 @@ export default {
             {
               title: 'URL',
               name: 'url',
+              type: 'string',
+            },
+            {
+              title: 'HTML ID',
+              name: 'sectionId',
               type: 'string',
             },
           ],

@@ -5,7 +5,7 @@ import SectionTitle from './SectionTitle';
 
 const Projects = () => {
   return (
-    <section id="recent-work" className="section-home container">
+    <section id="projects" className="nav-section container">
       <SectionTitle
         title="Projects"
         subtitle="Click the title for project details!"

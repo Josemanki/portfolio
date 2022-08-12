@@ -7,7 +7,7 @@ import {
   HiOutlinePaperAirplane,
 } from 'react-icons/hi';
 
-const Contact = () => {
+const Contact = ({ email: emailString }) => {
   const [result, setResult] = useState('');
   const [formData, setFormData] = useState({});
 
@@ -47,7 +47,7 @@ const Contact = () => {
   const { name, email, message } = formData;
 
   return (
-    <section id="contact" className="section-home container mb-12">
+    <section id="contact" className="nav-section container mb-12">
       <div className="px-6 h-full flex flex-col items-center justify-around">
         <SectionTitle
           title="Contact"
@@ -60,7 +60,7 @@ const Contact = () => {
                 <HiOutlineMail className="icon-lg" />
                 <div>
                   <h3 className="text-lg font-medium">Email address</h3>
-                  <span className="font-light">hello@hernandez-jose.com</span>
+                  <span className="font-light">{emailString}</span>
                 </div>
               </div>
             </div>

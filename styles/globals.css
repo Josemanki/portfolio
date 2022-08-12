@@ -6,11 +6,15 @@
   html {
     @apply text-white;
   } 
+  
+  section {
+    @apply scroll-mt-20
+  }
 }
 
 @layer components {
   .hero {
-    @apply container min-h-screen flex justify-center items-center flex-col p-6 pt-0 top-0 right-0 left-0 bottom-0 m-auto
+    @apply container min-h-screen flex justify-center items-center flex-col p-6 pt-0 top-0 right-0 left-0 bottom-0 m-auto sm:flex-row-reverse sm:gap-6
   }
 
   .contact-input {
@@ -18,15 +22,15 @@
   }
 
   .icon-sm {
-    @apply w-5 h-5 text-custom-blue
+    @apply w-5 h-5 text-custom-blue hover:text-rose-500
   }
 
   .icon-lg {
-    @apply w-6 h-6 text-custom-blue
+    @apply w-6 h-6 text-custom-blue hover:text-rose-500
   }
 
   .icon-xl {
-    @apply w-7 h-7 text-custom-blue
+    @apply w-7 h-7 text-custom-blue hover:text-rose-500
   }
 
   .hero-background {
