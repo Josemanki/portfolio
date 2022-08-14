@@ -18,6 +18,10 @@ export default function Home({ homeData }) {
     cta,
     footer,
     navbar,
+    frontend,
+    backend,
+    skills,
+    projects,
     email,
     linkedin,
     github,
@@ -74,9 +78,9 @@ export default function Home({ homeData }) {
       <Navbar currentSection={currentSection} links={navbar} />
       <Hero title={title} subtitle={subtitle} cta={cta} />
       <AboutMe about={about} />
-      <Skills />
-      <Summary />
-      <Projects />
+      <Skills skills={skills} />
+      <Summary frontend={frontend} backend={backend} />
+      <Projects projects={projects} />
       <Contact email={email} />
       <Footer
         links={footer}

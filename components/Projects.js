@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 import projects from '../data/projects';
 import SectionTitle from './SectionTitle';
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   return (
     <section id="projects" className="nav-section container">
       <SectionTitle

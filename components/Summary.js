@@ -3,7 +3,7 @@ import { BiCode } from 'react-icons/bi';
 import { FaDatabase } from 'react-icons/fa';
 import SectionTitle from './SectionTitle';
 
-const Summary = () => {
+const Summary = ({ frontend, backend }) => {
   return (
     <section className="p-6 pb-12 container">
       <SectionTitle title="What I do" subtitle="Let's get you a summary!" />
@@ -16,23 +16,10 @@ const Summary = () => {
             </h3>
           </div>
           <div>
-            <ul className="list-disc pl-5">
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
+            <ul className="list-disc space-y-3 pl-5">
+              {frontend.map((task) => (
+                <li>{task}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -47,23 +34,10 @@ const Summary = () => {
             </h3>
           </div>
           <div>
-            <ul className="list-disc pl-5">
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam,
-                repellendus.
-              </li>
+            <ul className="list-disc space-y-3 pl-5">
+              {backend.map((task) => (
+                <li>{task}</li>
+              ))}
             </ul>
           </div>
         </div>

@@ -71,6 +71,42 @@ export default {
       ],
     },
     {
+      name: 'skills',
+      title: 'Skill Badges',
+      description: 'Ordered list of skill badges',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'skill' }],
+        },
+      ],
+    },
+    {
+      name: 'frontend',
+      title: 'Frontend Summary',
+      description: 'What are the tasks of a Frontend Engineer?',
+      type: 'array',
+      of: [
+        {
+          title: 'Task',
+          type: 'string',
+        },
+      ],
+    },
+    {
+      name: 'backend',
+      title: 'Backend Summary',
+      description: 'What are the tasks of a Backend Engineer?',
+      type: 'array',
+      of: [
+        {
+          title: 'Task',
+          type: 'string',
+        },
+      ],
+    },
+    {
       name: 'footer',
       title: 'Footer links',
       description: 'What options/links should be shown on the Footer?',
