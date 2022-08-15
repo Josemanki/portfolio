@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LinkButton = ({ icon, title, link, classes }) => {
+const LinkButton = ({ icon, title, link, classes, blank, disabled }) => {
   const Icon = icon;
   return (
     <a
@@ -8,6 +8,7 @@ const LinkButton = ({ icon, title, link, classes }) => {
       className={`inline-block rounded-lg text-center bg-blue-500 px-6 py-3 hover:bg-rose-500 ${
         classes ? classes : ''
       }`}
+      target={blank ? '_blank' : '_self'}
     >
       <span className="flex items-center justify-center gap-2">
         {title}

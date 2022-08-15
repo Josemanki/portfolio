@@ -13,15 +13,16 @@ const AboutMe = ({ about }) => {
       />
       <div className="flex flex-col items-center justify-center sm:space-x-12 sm:flex-row ">
         <div className="flex-1">
-          <Blob />
+          <Blob alt />
         </div>
         <div>
           <p className="whitespace-pre-wrap">{about}</p>
           <LinkButton
             title={'Download my CV'}
             icon={AiOutlineFilePdf}
-            link={'#'}
+            link={'/resume.pdf'}
             classes={'self-start mt-6'}
+            blank
           />
         </div>
       </div>

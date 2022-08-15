@@ -5,7 +5,7 @@ const homeQuery = groq`
 *[_type == 'homepage'][0] {
   ...,
   skills[]->,
-    "projects": *[_type == 'project' && frontPage == true] {
+    "projects": *[_type == 'project' && frontPage == true] | order(_createdAt asc) {
     ...,
     skills[]->,
   },

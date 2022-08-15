@@ -24,17 +24,21 @@ const ProjectCard = ({ name, description, github, live, skills }) => {
           ))}
         </div>
         <div className="flex flex-wrap justify-around px-2">
-          <LinkButton
-            title={'Live Demo'}
-            icon={AiOutlineArrowRight}
-            link={live}
-            classes={'mb-4'}
-          />
+          {live && (
+            <LinkButton
+              title={'Live Demo'}
+              icon={AiOutlineArrowRight}
+              link={live}
+              classes={'mb-4'}
+              blank
+            />
+          )}
           <LinkButton
             title={'GitHub'}
             icon={SiGithub}
             link={github}
             classes={'mb-4'}
+            blank
           />
         </div>
       </div>
