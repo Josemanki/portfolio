@@ -14,7 +14,7 @@
 
 @layer components {
   .hero {
-    @apply container min-h-screen flex justify-center items-center flex-col p-6 pt-0 top-0 right-0 left-0 bottom-0 m-auto sm:flex-row-reverse sm:gap-6
+    @apply container min-h-screen flex justify-center items-center flex-col mt-10 p-6 pt-0 top-0 right-0 left-0 bottom-0 m-auto sm:flex-row-reverse sm:gap-6
   }
 
   .contact-input {

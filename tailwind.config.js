@@ -8,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-teal': '#28AFB0',
         'custom-navy': '#041C32',
         'custom-navy-light': '#062847',
         'custom-blue': '#2FA4FF',
@@ -22,10 +21,6 @@ module.exports = {
       gridTemplateRows: {
         'about-grid': 'min-content auto',
       },
-      backgroundImage: {
-        'radial-home':
-          'radial-gradient(56.25% 56.25% at 50% 50%, #252525 0%, #181818 100%)',
-      },
     },
     container: {
       center: true,
@@ -35,9 +30,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      'red-hat': ['Red Hat Display', 'ui-sans-serif'],
       poppins: ['Poppins', 'ui-sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

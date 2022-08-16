@@ -3,17 +3,18 @@ import LinkButton from './LinkButton';
 import { SiGithub } from 'react-icons/si';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import SkillBadge from './SkillBadge';
+import Link from 'next/link';
 
-const ProjectCard = ({ name, description, github, live, skills }) => {
+const ProjectCard = ({ name, description, github, live, skills, slug }) => {
   return (
     <div className="bg-custom-navy-light flex flex-col justify-between gap-y-4">
       <div>
         <div className="px-5 pt-4">
-          <a target="_blank" rel="noreferrer" href={live}>
-            <h4 className="text-2xl font-poppins font-semibold tracking-tight">
+          <Link href={`/${slug.current}`}>
+            <a className="text-2xl font-poppins font-semibold tracking-tight">
               {name}
-            </h4>
-          </a>
+            </a>
+          </Link>
           <p className="mt-4 font-normal">{description}</p>
         </div>
       </div>

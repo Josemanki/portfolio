@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { sanityClient } from '../sanity';
+import { groq } from 'next-sanity';
 import Head from 'next/head';
 import AboutMe from '../components/AboutMe';
 import Contact from '../components/Contact';
@@ -54,7 +56,7 @@ export default function Home({ homeData }) {
   }, []);
 
   return (
-    <div className="bg-custom-navy">
+    <>
       <Head>
         <title>Jose Hernandez - Portfolio</title>
         <meta name="title" content="Jose Hernandez - Portfolio" />
@@ -88,16 +90,23 @@ export default function Home({ homeData }) {
         linkedin={linkedin}
         email={email}
       />
-    </div>
+    </>
   );
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/getHomeData`
-  );
-  const homeData = await res.json();
+  const homeQuery = groq`
+  *[_type == 'homepage'][0] {
+    ...,
+    skills[]->,
+      "projects": *[_type == 'project' && frontPage == true] | order(_createdAt asc) {
+      ...,
+      skills[]->,
+    },
+  }
+`;
 
+  const homeData = await sanityClient.fetch(homeQuery);
   return {
     props: {
       homeData,

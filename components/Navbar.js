@@ -7,10 +7,13 @@ const Navbar = ({ currentSection, links }) => {
     <nav className="hidden w-screen h-16 fixed z-50 bg-custom-navy shadow-md sm:block">
       <div className="px-6 h-full container flex justify-between items-center">
         <div>
-          <h1 className="text-white text-4xl font-semibold font-poppins">
+          <a
+            href="#"
+            className="text-white text-4xl font-semibold font-poppins"
+          >
             JH
             <span className="text-blue-500">.</span>
-          </h1>
+          </a>
         </div>
         <ul className="flex flex-row space-x-6">
           {links.map((link) => (

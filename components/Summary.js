@@ -15,13 +15,11 @@ const Summary = ({ frontend, backend }) => {
               On the <span className="text-custom-blue">Front End</span>
             </h3>
           </div>
-          <div>
-            <ul className="list-disc space-y-3 pl-5">
-              {frontend.map((task) => (
-                <li>{task}</li>
-              ))}
-            </ul>
-          </div>
+          <ul className="list-disc space-y-3 pl-5">
+            {frontend.map((task, index) => (
+              <li key={index}>{task}</li>
+            ))}
+          </ul>
         </div>
 
         <div className="bg-custom-navy-light p-6 flex flex-col mb-6 shadow-lg">
@@ -33,13 +31,11 @@ const Summary = ({ frontend, backend }) => {
               On the <span className="text-custom-blue">Back End</span>
             </h3>
           </div>
-          <div>
-            <ul className="list-disc space-y-3 pl-5">
-              {backend.map((task) => (
-                <li>{task}</li>
-              ))}
-            </ul>
-          </div>
+          <ul className="list-disc space-y-3 pl-5">
+            {backend.map((task, index) => (
+              <li key={index}>{task}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

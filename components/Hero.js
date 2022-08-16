@@ -19,7 +19,7 @@ const Hero = ({ title, subtitle, cta }) => {
           </div>
           <div>
             <h1 className="font-poppins font-semibold text-3xl sm:text-6xl">
-              <span className="text-custom-blue">Hey there,</span> I'm Jose
+              <span className="text-custom-blue">Hey there,</span> I&apos;m Jose
             </h1>
             <h2 className="mt-2 text-xl font-bold">{title}</h2>
             <p className="text-md mt-2">{subtitle}</p>

@@ -9,6 +9,7 @@ const LinkButton = ({ icon, title, link, classes, blank, disabled }) => {
         classes ? classes : ''
       }`}
       target={blank ? '_blank' : '_self'}
+      rel="noreferrer"
     >
       <span className="flex items-center justify-center gap-2">
         {title}
