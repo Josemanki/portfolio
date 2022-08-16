@@ -11,12 +11,12 @@ const AboutMe = ({ about }) => {
         title="About Me"
         subtitle="May I interest you in some personal information?"
       />
-      <div className="flex flex-col items-center justify-center sm:space-x-12 sm:flex-row ">
+      <div className="flex flex-col items-center justify-center sm:space-x-12 sm:flex-row">
         <div className="flex-1">
           <Blob alt />
         </div>
         <div>
-          <p className="whitespace-pre-wrap">{about}</p>
+          <p className="whitespace-pre-wrap mt-8 sm:mt-0">{about}</p>
           <LinkButton
             title={'Download my CV'}
             icon={AiOutlineFilePdf}
