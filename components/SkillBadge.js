@@ -10,7 +10,7 @@ const SkillBadge = ({ name, iconName, bgColor, textColor }) => {
         style={{ color: textColor, backgroundColor: bgColor }}
       >
         <IconComponent />
-        <p className="font-medium">{name}</p>
+        <p className="font-medium whitespace-nowrap">{name}</p>
       </div>
     </div>
   );
