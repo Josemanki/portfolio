@@ -83,6 +83,8 @@ const Project = ({ projectData }) => {
               height={45}
               width={'100%'}
               alt={`Preview for ${name}`}
+              placeholder="blur"
+              blurDataURL="placeholder.png"
               priority
             />
           </div>
