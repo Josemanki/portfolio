@@ -1,29 +1,41 @@
 import React from 'react';
-import Image from 'next/image';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { MdOutlineMail } from 'react-icons/md';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ links, github, linkedin, email }) => {
   return (
-    <footer id="footer">
-      <div className="px-2 mb-4 flex flex-col items-center text-center uppercase font-poppins text-sm font-semibold text-neutral-400 gap-2 lg:flex-row lg:justify-center">
-        <div className="w-36 h-36 mx-32">
-          <Image src={'/logo-footer.svg'} width="100%" height="100%" layout="responsive" alt="" />
+    <footer id="footer" className="p-6 bg-custom-navy-light">
+      <div className="container sm:flex sm:justify-between">
+        <div>
+          <h3 className="uppercase font-poppins text-xl font-medium">
+            Jose <span className="text-custom-blue">Hernandez</span>
+          </h3>
+          <p className="font-light text-lg">Full Stack Developer</p>
+          <div className="flex space-x-12 mt-2">
+            <a href={github}>
+              <SiGithub className={'icon-lg'} />
+            </a>
+            <a href={linkedin}>
+              <SiLinkedin className={'icon-lg'} />
+            </a>
+            <a href={`mailto:${email}`}>
+              <MdOutlineMail className={'icon-xl'} />
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-2 lg:flex-row lg:order-first">
-          <Link href="#">
-            <a>Home</a>
-          </Link>
-          <Link href="#recent-work">
-            <a>Recent Work</a>
-          </Link>
-        </div>
-        <div className="flex flex-col gap-2 lg:flex-row">
-          <Link href="#about-me">
-            <a>About</a>
-          </Link>
-          <Link href="#contact">
-            <a>Contact</a>
-          </Link>
+
+        <div className="mt-4 sm:mt-0">
+          <h3 className="text-lg">Navigation</h3>
+          <ul className="mt-2 flex flex-col gap-y-4">
+            {links.map((link) => (
+              <Link key={link._key} href={link.url}>
+                <a className="ease-in duration-200 transition-all hover:text-rose-500">
+                  {link.section}
+                </a>
+              </Link>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

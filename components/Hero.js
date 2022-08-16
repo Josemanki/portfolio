@@ -1,39 +1,38 @@
 import React from 'react';
-import Vivus from 'vivus';
-import Image from 'next/image';
+import LinkButton from './LinkButton';
+import { MdWork } from 'react-icons/md';
+import Blob from './Blob';
 
-let animatedLogo;
-
-if (typeof window !== 'undefined') {
-  animatedLogo = new Vivus('logo', { duration: 150, file: '/logo.svg' });
-}
-
-const Hero = () => {
+const Hero = ({ title, subtitle, cta }) => {
   return (
-    <section
-      id="hero"
-      className="section-home min-h-screen bg-radial-home flex justify-center align-center flex-col p-4 pt-0"
-    >
-      <div className="flex items-center justify-center flex-col">
-        <div id="logo" className="w-64 h-64 sm:w-80 sm:h-80"></div>
-        <h1 className="text-5xl text-white font-red-hat text-center sm:text-7xl">Jose Hernández</h1>
-        <h2 className="text-2xl text-white font-light text-center sm:text-4xl">Fullstack Web Developer</h2>
+    <>
+      <div className="hero-background">
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+        <div className="cube"></div>
+
+        <section id="hero" className="hero nav-section">
+          <div className="flex justify-center mb-12">
+            <Blob />
+          </div>
+          <div>
+            <h1 className="font-poppins font-semibold text-3xl sm:text-6xl">
+              <span className="text-custom-blue">Hey there,</span> I&apos;m Jose
+            </h1>
+            <h2 className="mt-2 text-xl font-bold">{title}</h2>
+            <p className="text-md mt-2">{subtitle}</p>
+            <LinkButton
+              icon={MdWork}
+              link={'#projects'}
+              title={cta}
+              classes={'mt-4'}
+            />
+          </div>
+        </section>
       </div>
-      <div className="flex flex-col justify-center items-center mt-12 gap-6 sm:flex-row">
-        <a
-          href="#contact"
-          className="text-center cursor-pointer bg-custom-teal text-base py-2 px-6 rounded-3xl text-white uppercase font-black w-64"
-        >
-          Contact Me
-        </a>
-        <a
-          href="#recent-work"
-          className="text-center cursor-pointer border-2 border-custom-teal text-base py-2 px-6 rounded-3xl text-white uppercase font-black w-64"
-        >
-          Check my Work
-        </a>
-      </div>
-    </section>
+    </>
   );
 };
 

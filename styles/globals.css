@@ -2,20 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply text-white;
+  } 
+  
+  section {
+    @apply scroll-mt-20
+  }
+}
+
 @layer components {
-  .decoration-top {
-    @apply after:content-[''] after:w-[250px] after:h-[10px] after:border-t-8 after:border-rose-600 after:absolute after:-top-16 after:-left-10;
-  }
-  .decoration-bottom {
-    @apply before:w-[250px] before:h-[10px] before:border-b-8 before:border-rose-600 before:absolute before:-bottom-16 before:-right-[1.5rem];
+  .hero {
+    @apply container min-h-screen flex justify-center items-center flex-col mt-10 p-6 pt-0 top-0 right-0 left-0 bottom-0 m-auto sm:flex-row-reverse sm:gap-6
   }
 
-  .decoration-top-alt {
-    @apply after:content-[''] after:w-[250px] after:h-[250px] after:border-t-8 after:border-l-8 after:border-rose-600 after:absolute after:-top-10 after:left-10;
+  .contact-input {
+    @apply p-2 bg-custom-navy border-b-2 border-custom-blue outline-none transition-all duration-300 focus:border-b-4 focus:border-rose-500
   }
 
-  .decoration-bottom-alt {
-    @apply before:w-[300px] before:h-[150px] before:border-b-8 before:border-r-8 before:border-rose-600 before:absolute before:bottom-0 before:right-10;
+  .icon-sm {
+    @apply w-5 h-5 text-custom-blue hover:text-rose-500
+  }
+
+  .icon-lg {
+    @apply w-6 h-6 text-custom-blue hover:text-rose-500
+  }
+
+  .icon-xl {
+    @apply w-7 h-7 text-custom-blue hover:text-rose-500
+  }
+
+  .hero-background {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+  }
+
+  .cube {
+    position: absolute;
+    z-index: -1;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 14s ease-in forwards infinite;
+  }
+
+  .cube:nth-child(2n) {
+    border-color: #FFF ;
+  }
+  .cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 20vh;
+  }
+  .cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 80vh;
+  }
+  .cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+  }
+  .cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+  }
+  .cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+  }
+
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
   }
 }
 
