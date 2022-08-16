@@ -17,7 +17,7 @@ const Hero = ({ title, subtitle, cta }) => {
           <div className="flex justify-center mb-12">
             <Blob />
           </div>
-          <div>
+          <div className="cursor-default">
             <h1 className="font-poppins font-semibold text-3xl sm:text-6xl">
               <span className="text-custom-blue">Hey there,</span> I&apos;m Jose
             </h1>

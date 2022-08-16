@@ -135,7 +135,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const projectQuery = groq`
-  *[_type == 'project' && slug.current == 'urban-fashion'][0] {
+  *[_type == 'project' && slug.current == $slug][0] {
     ...,
     'socials': *[_type == 'homepage'][0] {
       github,
